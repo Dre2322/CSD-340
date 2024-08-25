@@ -1,0 +1,51 @@
+/* Center the h1 title */
+h1 {
+    text-align: center;
+}
+
+/* Set styles for the side-by-side divs */
+#container div {
+    width: 45%;
+}
+
+/* Styles for the bottom div */
+#container div:last-child {
+    width: 100%;
+    margin-top: 60%;
+}
+
+/* Set font weight for h3 and lists */
+h3 {
+    font-weight: 500;
+}
+
+ol, ul {
+    font-weight: 300;
+}
+
+/* Styles for the ordered list */
+ol {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: decimal inside;
+}
+
+/* Styles for the unordered list */
+ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: upper-roman inside;
+}
+
+/* Hover effect for links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style for the bottom div's link */
+#container div:last-child a {
+    float: right;
+    margin-bottom: 20px;
+}
