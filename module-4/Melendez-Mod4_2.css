@@ -1,0 +1,46 @@
+/* Apply CSS grid with three columns for the image-gallery div */
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px; /* Space between grid items */
+    margin-top: 10%;
+}
+
+/* Center the h1 text and apply color */
+h1 {
+    text-align: center;
+    color: rgba(255, 87, 34, 0.8); /* Example color: deep orange with opacity */
+}
+
+/* Center the h3 text and apply color */
+.gallery-item h3 {
+    text-align: center;
+    color: rgba(33, 150, 243, 0.8); /* Example color: light blue with opacity */
+}
+
+/* Center the figure and its contents */
+figure {
+    text-align: center;
+}
+
+/* Style for images: Set a max-width, height, and border */
+figure img {
+    max-width: 100%; /* Ensure image does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid rgba(0, 0, 0, 0.5); /* Add a 2px solid border with semi-transparent color */
+    border-radius: 8px; /* Optional: Add rounded corners to the border */
+    padding: 45px; /* Optional: Add some space between the image and the border */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+}
+
+/* Style for figcaption: italic text, smaller font size, and apply color */
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(0, 188, 212, 0.8); /* Example color: light teal with opacity */
+}
+
+/* Optional: Apply additional styles if needed */
+body {
+    font-family: Arial, sans-serif; /* Ensure a clean, readable font */
+}
