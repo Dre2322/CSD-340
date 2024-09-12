@@ -4,22 +4,22 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    padding: 20px; /* Added padding for content spacing */
 }
 
 /* Styling for the main header */
 h1 {
-    text-align: center;
     color: #333;
     margin-top: 20px;
+    text-align: left; /* Aligns header to the left */
 }
 
 /* Styling for the paragraph */
 p {
-    text-align: center;
     color: #555;
-    margin: 20px auto;
-    max-width: 600px;
+    margin: 20px 0;
     line-height: 1.6;
+    text-align: left; /* Aligns paragraph text to the left */
 }
 
 /* Footer styling */
@@ -31,13 +31,13 @@ footer {
     width: 100%;
     padding: 5px 10px; /* Adds padding for spacing */
     box-sizing: border-box; /* Ensures padding is included in the width calculation */
-    text-align: right; /* Aligns the text to the right */
 }
 
 footer p {
     color: white;
     font-weight: 400;
     font-style: italic;
+    text-align: right; /* Aligns the text to the right */
     margin: 0; /* Removes default margin */
     white-space: nowrap; /* Prevents the text from wrapping to the next line */
 }
