@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Introduction page for Assignment 2.2">
+    <meta name="author" content="Andres Melendez">
+    <meta name="keywords" content="HTML, CSS, CSD 340">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Melendez-Mod2_2.css">
+
+    <!-- JavaScript to replace span content -->
+    <script>
+        var word1 = "gentle";
+        var word2 = "Rage";
+        var word3 = "night";
+        var word4 = "light";
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <h2>Do not go gentle into that good night</h2>
+        
+        <p>Do not go <span id="span1">_________</span> into that good night,</p>
+        <p>Old age should burn and rave at close of day;</p>
+        <p><span id="span2">_________</span>, rage against the dying of the light.</p>
+        
+        <p></p>
+        <p>Though wise men at their end know dark is right, </p>
+        <p>Because their words had forked no lightning they </p>
+        <p>Do not go gentle into that good <span id="span3">_________</span>.</p>
+        
+        <p></p>
+        <p>Good men, the last wave by, crying how bright </p>
+        <p>Their frail deeds might have danced in a green bay, </p>
+        <p>Rage, rage against the dying of the <span id="span4">_________</span>.</p>
+        <p>~ Dylan Thomas</p>
+
+        <!-- JavaScript buttons -->
+        <p>
+            <button type="button" onclick="document.getElementById('span1').innerHTML = word1">gentle</button>
+            <button type="button" onclick="document.getElementById('span2').innerHTML = word2">Rage</button>
+            <button type="button" onclick="document.getElementById('span3').innerHTML = word3">night</button>
+            <button type="button" onclick="document.getElementById('span4').innerHTML = word4">light</button>
+        </p>
+
+        <hr>
+        <address>
+            <p><a href="https://www.bellevue.edu" target="_blank">Bellevue University</a></p>
+            <p>1000 Galvin Rd S</p>
+            <p>Bellevue, NE 68005</p>
+        </address>
+
+        <!-- Bottom Div -->
+        <footer>
+            <p>2024 Melendez | <a href="../index.html">Back to Portal</a></p>
+        </footer>        
+    </div>
+</body>
+</html>
