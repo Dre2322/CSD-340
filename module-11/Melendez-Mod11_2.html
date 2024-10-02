@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <!-- Description of what the buttons do -->
+    <p>
+        This is an interactive TO DO LIST. The "Add" button will add the value to a list. The "Delete Item" button lets you remove an item from the list by entering its position. The "Display" button will show all items in the list.
+    </p>
+
+    <!-- Text box for user input -->
+    <input type="text" id="inputBox" placeholder="Enter text here">
+
+    <!-- Buttons for actions -->
+    <button onclick="addItem()">Add</button>
+    <button onclick="deleteItem()">Delete Item</button>
+    <button onclick="displayItems()">Display</button>
+
+    <script>
+        // Create an empty array to store the items
+        let items = [];
+
+        // Function to add item to the array
+        function addItem() {
+            let inputBox = document.getElementById('inputBox').value;
+            if (inputBox) {
+                items.push(inputBox); // Add item to the array
+                alert(`Added: ${inputBox} at position ${items.length}`); // Show alert
+                document.getElementById('inputBox').value = ''; // Clear the input box
+            } else {
+                alert("Please enter something to add!"); // Alert if the input is empty
+            }
+        }
+
+        // Function to delete a specific item from the array
+        function deleteItem() {
+            if (items.length > 0) {
+                let position = prompt(`Enter the number of the item to delete (1 to ${items.length}):`);
+                let index = parseInt(position) - 1; // Convert to zero-based index
+                if (index >= 0 && index < items.length) {
+                    let removedItem = items.splice(index, 1); // Remove the specific item
+                    alert(`Deleted: ${removedItem}`); // Show which item was deleted
+                } else {
+                    alert("Invalid position!"); // Alert if the user enters an invalid index
+                }
+            } else {
+                alert("No items to delete!"); // Alert if the array is empty
+            }
+        }
+
+        // Function to display the array contents
+        function displayItems() {
+            if (items.length > 0) {
+                let displayText = '';
+                // Loop through the array and display items starting from index 1
+                items.forEach((item, index) => {
+                    displayText += `${index + 1}. ${item}\n`;
+                });
+                alert(displayText); // Show all items in an alert box
+            } else {
+                alert("No items to display!"); // Alert if the array is empty
+            }
+        }
+    </script>
+</body>
+</html>

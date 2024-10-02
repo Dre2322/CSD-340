@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .box {
+            border: 2px dashed red;
+            padding: 15px;
+            width: 40%;
+        }
+
+        .box h3 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #bookList ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #bookList li {
+            margin: 5px 0;
+            padding: 5px;
+            background-color: #f0f0f0;
+        }
+
+        .underline {
+            border-bottom: 1px solid #000;
+            margin: 10px 0;
+        }
+
+        .footer {
+            text-align: right;
+            margin-top: 30px;
+        }
+
+        .footer a {
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+    <div class="container">
+        <div class="box">
+            <h3>Top 10 Favorite Books</h3>
+            <button onclick="sortTopToBottom()">Top to Bottom</button>
+            <button onclick="sortBottomToTop()">Bottom to Top</button>
+
+            <div class="underline"></div>
+
+            <div id="bookList">
+                <ul>
+                    <li>10. The Lost King</li>
+                    <li>9. Dies the Fire</li>
+                    <li>8. The Stand</li>
+                    <li>7. Dune</li>
+                    <li>6. Do Androids Dream of Electric Sheep?</li>
+                    <li>5. The Hobbit</li>
+                    <li>4. The Art of Deception</li>
+                    <li>3. Papillon</li>
+                    <li>2. The Godfather</li>
+                    <li>1. A Wrinkle in Time</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>5 Things I've Learned Since the Course Started</h3>
+            <ol type="I">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="#">back to Landing Page</a>
+    </div>
+
+    <script>
+        const books = [
+            "The Lost King",
+            "Dies the Fire",
+            "The Stand",
+            "Dune",
+            "Do Android Dream of Electric Sheep?",
+            "The Hobbit",
+            "The Art of Deception",
+            "Papillon",
+            "The Godfather",
+            "A Wrinkle in Time"
+        ];
+
+        function sortTopToBottom() {
+            const sortedBooks = [...books].sort();
+            displayBooks(sortedBooks);
+        }
+
+        function sortBottomToTop() {
+            const sortedBooks = [...books].sort().reverse();
+            displayBooks(sortedBooks);
+        }
+
+        function displayBooks(bookArray) {
+            let output = "<ul>";
+            for (let i = 0; i < bookArray.length; i++) {
+                output += `<li>${i + 1}. ${bookArray[i]}</li>`;
+            }
+            output += "</ul>";
+            document.getElementById("bookList").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>
