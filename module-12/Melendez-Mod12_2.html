@@ -35,6 +35,10 @@
             margin-bottom: 10px;
         }
 
+        .box ol li {
+            margin-bottom: 15px; /* Add spacing between each list item */
+        }
+
         button {
             margin: 5px;
             padding: 10px;
@@ -83,16 +87,16 @@
 
             <div id="bookList">
                 <ul>
-                    <li>10. The Lost King</li>
-                    <li>9. Dies the Fire</li>
-                    <li>8. The Stand</li>
-                    <li>7. Dune</li>
-                    <li>6. Do Androids Dream of Electric Sheep?</li>
-                    <li>5. The Hobbit</li>
-                    <li>4. The Art of Deception</li>
-                    <li>3. Papillon</li>
-                    <li>2. The Godfather</li>
-                    <li>1. A Wrinkle in Time</li>
+                    <li>10. The Picture of Dorian Gray</li>
+                    <li>9. The Shining</li>
+                    <li>8. American Gods</li>
+                    <li>7. The Giver</li>
+                    <li>6. The Book Thief</li>
+                    <li>5. To Kill a Mockingbird</li>
+                    <li>4. The House of the Scorpion</li>
+                    <li>3. I Am the Messenger</li>
+                    <li>2. The Catcher in the Rye</li>
+                    <li>1. The Great Gatsby</li>
                 </ul>
             </div>
         </div>
@@ -100,31 +104,27 @@
         <div class="box">
             <h3>5 Things I've Learned Since the Course Started</h3>
             <ol type="I">
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-                <li>Item 4</li>
-                <li>Item 5</li>
+                <li><strong>Linking HTML, CSS, and External Resources:</strong> I learned how to link HTML files to CSS stylesheets and how to link to external websites, ensuring web pages are styled consistently and can connect to other resources.</li>
+                <li><strong>Box Model Concepts:</strong> I gained a strong understanding of the CSS box model, including how to manage borders, margins, padding, and control the size of elements, which is essential for effective layout and spacing on web pages.</li>
+                <li><strong>Table and Form Styling:</strong> I learned how to style tables and forms, including adding borders and backgrounds, customizing bullet points for lists, and modifying form elements to enhance their appearance and usability.</li>
+                <li><strong>Site Layout Creation:</strong> I gained knowledge of how to create entire site layouts using CSS, ensuring elements like headers, footers, sidebars, and main content areas are positioned and styled appropriately for user navigation.</li>
+                <li><strong>JavaScript Integration for Interactivity:</strong> I learned how to introduce basic JavaScript functionality, such as handling events and manipulating arrays, to add interactivity to web pages (e.g., creating a to-do list or favorite book list).</li>
             </ol>
         </div>
     </div>
 
-    <div class="footer">
-        <a href="#">back to Landing Page</a>
-    </div>
-
     <script>
         const books = [
-            "The Lost King",
-            "Dies the Fire",
-            "The Stand",
-            "Dune",
-            "Do Android Dream of Electric Sheep?",
-            "The Hobbit",
-            "The Art of Deception",
-            "Papillon",
-            "The Godfather",
-            "A Wrinkle in Time"
+            "The Great Gatsby",
+            "The Catcher in the Rye",
+            "I Am the Messenger",
+            "The House of the Scorpion",
+            "To Kill a Mockingbird",
+            "The Book Thief",
+            "The Giver",
+            "American Gods",
+            "The Shining",
+            "The Picture of Dorian Gray"
         ];
 
         function sortTopToBottom() {
@@ -146,6 +146,8 @@
             document.getElementById("bookList").innerHTML = output;
         }
     </script>
-
+    <footer></footer>
+        <p>&copy; 2024 Melendez | <a href="../index.html">Back to Portal</a></p>
+    </footer>
 </body>
 </html>
